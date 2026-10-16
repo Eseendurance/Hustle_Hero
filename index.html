@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hustle Hero | Nigerian Street Hustle & Personal Finance Simulation</title>
+  <meta name="description" content="Play Hustle Hero: Run your Nigerian enterprise, balance personal & business budgets, save in Ajo (Esusu), survive fuel hikes, and conquer the Lagos markets!">
+  <meta property="og:title" content="Hustle Hero | Nigerian Street Hustle Game">
+  <meta property="og:description" content="Run your business, balance budgets, save in Ajo, and conquer the streets!">
+  <meta property="og:image" content="assets/hero-banner.jpg">
+  
+  <!-- Modern Typography from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Wazobia Hustle Radio Live Ticker -->
+  <div class="radio-ticker">
+    <div class="radio-badge">📻 WAZOBIA 95.1 FM</div>
+    <div class="ticker-wrap">
+      <div class="ticker-content">
+        🔥 BREAKING: Fuel scarcity reported across Ikorodu and Oshodi | 📈 Balogun Market traders record massive rush ahead of salary weekend | 💡 National Grid reports drop in generation, standby gen sets booming | 🤝 Balogun Unity Ajo circle Turn 4 jackpot pot reaches ₦50,000! | 🍲 Iya Basira's Firewood Jollof wins Mainland street food trophy!
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <a href="#" class="brand">
+      <div class="brand-icon">⚡</div>
+      <div class="brand-title">HUSTLE <span>HERO</span></div>
+    </a>
+    <div class="nav-actions">
+      <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
+      <a href="#simulator" class="btn-download-nav" style="background: var(--surface-subtle); color: var(--text-primary); border: 1px solid var(--border-subtle);">🎮 Play Web Demo</a>
+      <a href="#download" class="btn-download-nav">📥 Download APK</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-text-content">
+        <div class="hero-pill">
+          <span>🇳🇬</span> Made for Naija Hustlers & Entrepreneurs
+        </div>
+        <h1 class="hero-title">
+          Master the Streets, <br>
+          <span class="gradient-text">Build Your Business Empire.</span>
+        </h1>
+        <p class="hero-desc">
+          Run your enterprise, balance business working capital against personal household budgets, save in community <strong>Ajo (Esusu)</strong> circles, tackle generator fuel crises, and rise from a street trader to a Lagos tycoon!
+        </p>
+        <div class="hero-cta-group">
+          <a href="#simulator" class="btn-primary-large">
+            <span>🎮 Play Interactive Web Demo</span>
+          </a>
+          <a href="#download" class="btn-secondary-large">
+            <span>📱 Download Android App</span>
+          </a>
+        </div>
+
+        <!-- Persistent Live Dual-Wallet Preview -->
+        <div class="wallet-bar-grid">
+          <div class="wallet-card business">
+            <div class="wallet-label">
+              <span>🛒 Business Cash</span>
+              <span>Account 1</span>
+            </div>
+            <div id="businessCash" class="wallet-amount">₦120,000</div>
+            <div class="wallet-sub">Working Capital & Inventory</div>
+          </div>
+          <div class="wallet-card personal">
+            <div class="wallet-label">
+              <span>👛 Personal Wallet</span>
+              <span>Account 2</span>
+            </div>
+            <div id="personalCash" class="wallet-amount">₦45,000</div>
+            <div class="wallet-sub">Household, Meals & Savings</div>
+          </div>
+          <div class="wallet-card ajo">
+            <div class="wallet-label">
+              <span>🤝 Ajo (Esusu) Circle</span>
+              <span>Turn 4 Pot</span>
+            </div>
+            <div id="ajoSaved" class="wallet-amount">₦20,000</div>
+            <div class="wallet-sub">₦10,000 / week rotation</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Banner -->
+      <div class="hero-banner-container">
+        <img src="assets/hero-banner.jpg" alt="Hustle Hero Lagos Street Market Cover Banner" class="hero-banner-img" loading="eager">
+        <div class="hero-banner-badge">🔥 Naija Business Sim • Live on Android & Web</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Web Game Simulator Section -->
+  <section id="simulator" class="simulator-section">
+    <div class="section-header">
+      <div class="section-tag">Interactive Simulation</div>
+      <h2 class="section-title">Play Hustle Hero in Your Browser</h2>
+      <p class="section-subtitle">Experience the dual-wallet mechanics, restock your inventory, survive Lagos street events, and grow your net worth week by week!</p>
+    </div>
+
+    <div class="game-console">
+      <!-- Console Header -->
+      <div class="console-header">
+        <div class="player-tag">
+          <div id="playerAvatar" class="player-avatar">👨🏾‍💻</div>
+          <div class="player-details">
+            <h4 id="playerName">Tunde</h4>
+            <p id="playerTitle">Computer Village Tech Whiz</p>
+          </div>
+        </div>
+
+        <div class="console-stats-bar">
+          <div class="stat-chip week">
+            <span>📅</span> Week <strong id="weekNumber">1</strong>
+          </div>
+          <div class="stat-chip">
+            <span>🏆 Net Worth:</span> <strong id="totalNetWorth" style="color: var(--gold-light);">₦285,000</strong>
+          </div>
+          <div class="stat-chip">
+            <span>⚡ Energy:</span> <strong id="energyLevel" style="color: var(--primary-light);">85%</strong>
+          </div>
+          <div class="stat-chip">
+            <span>😰 Stress:</span> <strong id="stressLevel" style="color: #ff5252;">20%</strong>
+          </div>
+          <div class="stat-chip">
+            <span>⭐ Street Rep:</span> <strong id="reputationScore">60 / 100</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div class="console-nav">
+        <button class="tab-btn active" data-tab="tab-dashboard">🏠 Business Dashboard</button>
+        <button class="tab-btn" data-tab="tab-meals">🍲 Everyday Food & Health</button>
+        <button class="tab-btn" data-tab="tab-inventory">🛒 Restock & Pricing</button>
+        <button class="tab-btn" data-tab="tab-ajo">🤝 Balogun Unity Ajo</button>
+        <button class="tab-btn" data-tab="tab-events">⚡ Lagos Street Events</button>
+      </div>
+
+      <!-- Console Body -->
+      <div class="console-body">
+        
+        <!-- Tab 1: Dashboard -->
+        <div id="tab-dashboard" class="tab-pane active">
+          <div class="dashboard-grid">
+            <div class="dash-widget">
+              <h5>
+                <span>💼 Business Financial Standing</span>
+                <span style="color: var(--primary-light); font-size: 0.8rem;">Level 2 Kiosk</span>
+              </h5>
+              <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;">
+                <div>📦 Available Inventory: <strong id="invUnits" style="color: var(--text-primary);">50 Units</strong></div>
+                <div>🏷️ Retail Selling Price: <strong>₦4,500 / unit</strong></div>
+                <div>🏭 Wholesale Cost: <strong>₦2,400 / unit</strong></div>
+                <div>📈 Projected Weekly Revenue: <strong id="weeklyEstRevenue" style="color: var(--gold-light);">₦180,000</strong></div>
+              </div>
+
+              <div class="slider-group">
+                <div class="slider-label">
+                  <span>Weekly Salary Draw to Personal Wallet</span>
+                  <span id="salaryValue" style="color: var(--gold-light);">₦15,000</span>
+                </div>
+                <input type="range" id="salarySlider" class="slider-input" min="5000" max="60000" step="5000" value="15000">
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Transfers business profits into your personal spending wallet automatically each turn.</p>
+              </div>
+            </div>
+
+            <div class="dash-widget">
+              <h5>
+                <span>⚡ Active Street Situation</span>
+                <span style="color: var(--gold); font-size: 0.8rem;">Real-time Event</span>
+              </h5>
+              <div id="eventBox" class="event-box">
+                <!-- Dynamically loaded by JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Food & Health -->
+        <div id="tab-meals" class="tab-pane">
+          <h4 style="margin-bottom: 8px;">Naija Street Delicacies & Energy Fuel</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 20px;">
+            A hungry entrepreneur cannot conquer Lagos streets! Buy meals from your personal wallet to boost energy and relieve stress.
+          </p>
+
+          <div class="meals-grid">
+            <div class="meal-card">
+              <div>
+                <h6>🍲 Firewood Party Jollof</h6>
+                <p class="meal-desc">Smoky, aromatic rice with fried plantain (Dodo) and chilled Malta. Guaranteed moral booster.</p>
+              </div>
+              <div class="meal-footer">
+                <div class="meal-price">₦3,500</div>
+                <button class="btn-buy-sm" onclick="buyMeal('Firewood Jollof', 3500, 20, 15)">Buy Meal 🍲</button>
+              </div>
+            </div>
+
+            <div class="meal-card">
+              <div>
+                <h6>🥩 Authentic Beef Suya & Onions</h6>
+                <p class="meal-desc">Spicy Yaji pepper spiced skewered beef roasted over open charcoal coals with fresh cabbage.</p>
+              </div>
+              <div class="meal-footer">
+                <div class="meal-price">₦4,500</div>
+                <button class="btn-buy-sm" onclick="buyMeal('Beef Suya', 4500, 25, 20)">Buy Meal 🥩</button>
+              </div>
+            </div>
+
+            <div class="meal-card">
+              <div>
+                <h6>🌯 Mainland Chicken Shawarma</h6>
+                <p class="meal-desc">Double sausage, spicy garlic cream, and tender grilled shredded chicken wrapped in flatbread.</p>
+              </div>
+              <div class="meal-footer">
+                <div class="meal-price">₦4,000</div>
+                <button class="btn-buy-sm" onclick="buyMeal('Shawarma', 4000, 22, 18)">Buy Meal 🌯</button>
+              </div>
+            </div>
+
+            <div class="meal-card">
+              <div>
+                <h6>🥣 Amala & Abula Special</h6>
+                <p class="meal-desc">Fluffy piping hot black yam flour paste bathed in Gbegiri and Ewedu with tender goat meat.</p>
+              </div>
+              <div class="meal-footer">
+                <div class="meal-price">₦5,000</div>
+                <button class="btn-buy-sm" onclick="buyMeal('Amala Special', 5000, 30, 25)">Buy Meal 🥣</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Restock & Inventory -->
+        <div id="tab-inventory" class="tab-pane">
+          <h4 style="margin-bottom: 8px;">Alaba & Balogun Wholesale Restock</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 20px;">
+            Buy merchandise in bulk using your business working capital. Bulk restocks unlock discounted prices!
+          </p>
+
+          <div class="dashboard-grid">
+            <div class="dash-widget">
+              <h5>📦 Restock Orders</h5>
+              <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 14px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; background: var(--surface-card); padding: 12px; border-radius: 10px;">
+                  <div>
+                    <div style="font-weight: 700;">Small Restock Batch (+25 units)</div>
+                    <div style="font-size: 0.78rem; color: var(--text-muted);">Cost: ₦60,000 (₦2,400/unit)</div>
+                  </div>
+                  <button class="btn-buy-sm" onclick="restockInventory(25)">Order 25 Units</button>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; background: var(--surface-card); padding: 12px; border-radius: 10px;">
+                  <div>
+                    <div style="font-weight: 700;">Standard Wholesale Batch (+50 units)</div>
+                    <div style="font-size: 0.78rem; color: var(--text-muted);">Cost: ₦120,000 (₦2,400/unit)</div>
+                  </div>
+                  <button class="btn-buy-sm" onclick="restockInventory(50)">Order 50 Units</button>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; background: var(--surface-card); padding: 12px; border-radius: 10px;">
+                  <div>
+                    <div style="font-weight: 700;">Major Distributor Cargo (+100 units)</div>
+                    <div style="font-size: 0.78rem; color: var(--text-muted);">Cost: ₦240,000 (₦2,400/unit)</div>
+                  </div>
+                  <button class="btn-buy-sm" onclick="restockInventory(100)">Order 100 Units</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="dash-widget">
+              <h5>📊 Market Demand Forecast</h5>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                Currently, foot traffic in your commercial district is driven by consumer confidence and your street reputation.
+              </p>
+              <div style="margin-top: 16px; padding: 14px; background: rgba(0, 135, 81, 0.1); border: 1px solid var(--border-active); border-radius: 12px;">
+                <div style="font-weight: 800; color: var(--primary-light);">💡 Merchant Pro-Tip:</div>
+                <div style="font-size: 0.82rem; color: var(--text-primary); margin-top: 4px;">
+                  Keeping at least 30 units in stock prevents lost sales during surprise payday rushes!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Ajo (Esusu) Circle -->
+        <div id="tab-ajo" class="tab-pane">
+          <h4 style="margin-bottom: 8px;">Balogun Unity Ajo (Esusu) Savings Circle</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 20px;">
+            A traditional Nigerian rotational contribution pool of 5 verified merchants. Each member deposits ₦10,000/week, and one member takes home the entire ₦50,000 jackpot pot each round!
+          </p>
+
+          <div class="dashboard-grid">
+            <div class="dash-widget">
+              <h5>🤝 Circle Status & Payout</h5>
+              <div style="font-size: 0.9rem; line-height: 1.8; color: var(--text-secondary);">
+                <div>👥 Active Circle Members: <strong>5 Traders</strong></div>
+                <div>💰 Weekly Contribution: <strong>₦10,000</strong></div>
+                <div>🎯 Total Cumulative Deposited: <strong id="ajoDepositedDisplay" style="color: var(--gold-light);">₦20,000</strong></div>
+                <div>🎉 Your Scheduled Payout Turn: <strong style="color: var(--primary-light);">Turn 4 (₦50,000 Lump Sum)</strong></div>
+              </div>
+
+              <div style="margin-top: 20px;">
+                <button class="btn-primary-large" style="width: 100%; justify-content: center;" onclick="contributeAjo()">
+                  <span>Deposit ₦10,000 Weekly Quota 🤝</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="dash-widget">
+              <h5>📜 Esusu Discipline Rules</h5>
+              <ul style="padding-left: 18px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+                <li>Defaulting on weekly contribution severely damages your street reputation (-15 Rep).</li>
+                <li>Punctual savings increases creditworthiness and unlocks commercial bank overdrafts.</li>
+                <li>Payouts can be reinvested directly into bulk inventory or emergency fuel reserves.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: Events -->
+        <div id="tab-events" class="tab-pane">
+          <h4 style="margin-bottom: 8px;">Street Hustle Live Events</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 20px;">
+            Experience sudden market shifts, supplier discounts, grid blackouts, and customer negotiations.
+          </p>
+          <div id="tabEventsBox">
+            <p style="color: var(--text-secondary);">See the active event card in the main dashboard or advance the week to trigger the next scenario!</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Console Footer Actions -->
+      <div class="console-footer">
+        <div style="font-size: 0.85rem; color: var(--text-muted);">
+          Each turn simulates 1 full trading week in Lagos.
+        </div>
+        <button id="btnNextWeek" class="next-week-btn">
+          <span>Simulate Next Trading Week ⏩</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Highlights Gallery -->
+  <section class="gallery-section">
+    <div class="section-header">
+      <div class="section-tag">Game Visuals</div>
+      <h2 class="section-title">Authentic Nigerian Aesthetics</h2>
+      <p class="section-subtitle">Experience rich cultural realism, from mainland street food to vibrant market hubs.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="assets/img_gourmet_takeout.jpg" alt="Nigerian Gourmet Street Food Takeout">
+        <div class="gallery-content">
+          <h4>🍲 Gourmet Street Cuisine</h4>
+          <p>Order Jollof, Suya, and Shawarma to recharge energy between strenuous trading shifts.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="assets/img_home_morning_life.jpg" alt="Lagos Morning Routine Life">
+        <div class="gallery-content">
+          <h4>☀️ Everyday Life Routines</h4>
+          <p>Balance family responsibilities, personal living expenses, and home utilities.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="assets/img_party_clubbing.jpg" alt="Lagos Nightlife and Owambe Celebration">
+        <div class="gallery-content">
+          <h4>🎉 Owambe & Weekend Celebration</h4>
+          <p>Celebrate hard-won milestones, build street networking connections, and expand your enterprise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Android APK Section -->
+  <section id="download" class="download-section">
+    <div class="download-card">
+      <div class="download-grid">
+        <div class="download-info">
+          <h3>Install Hustle Hero on Android</h3>
+          <p>Play the full native experience on your Android phone with offline gameplay, real-time Firebase leaderboards, and tactile Jetpack Compose animations.</p>
+          
+          <ul class="feature-check-list">
+            <li><span class="check">✓</span> 100% Free & Open Source</li>
+            <li><span class="check">✓</span> Native Jetpack Compose & Kotlin Experience</li>
+            <li><span class="check">✓</span> Dual-Wallet Banking & Rotational Ajo Simulation</li>
+            <li><span class="check">✓</span> Automated GitHub Actions APK Builds</li>
+          </ul>
+
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="https://github.com/Eseendurance/Hustle_Hero/releases" target="_blank" class="btn-primary-large">
+              <span>📥 Download Latest APK (v1.0)</span>
+            </a>
+            <a href="https://github.com/Eseendurance/Hustle_Hero" target="_blank" class="btn-secondary-large">
+              <span>⭐ View GitHub Repository</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="install-box">
+          <h5>📱 How to Install on Android</h5>
+          <div class="install-step">
+            <div class="step-num">1</div>
+            <div>Download the <strong>app-debug.apk</strong> file from GitHub Actions or Releases.</div>
+          </div>
+          <div class="install-step">
+            <div class="step-num">2</div>
+            <div>Open the downloaded APK on your Android device (allow <em>Install from Unknown Sources</em> if prompted).</div>
+          </div>
+          <div class="install-step">
+            <div class="step-num">3</div>
+            <div>Tap <strong>Install</strong>, launch <strong>Hustle Hero</strong>, and start your enterprise journey!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
+      <div>
+        <strong>Hustle Hero</strong> — Developed with ❤️ for Nigerian Entrepreneurs & Gamers.
+      </div>
+      <div>
+        <a href="https://github.com/Eseendurance/Hustle_Hero" target="_blank">GitHub Repository</a> • 
+        <a href="#simulator">Play Web Simulation</a> • 
+        <a href="#download">Download APK</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
