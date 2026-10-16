@@ -1,0 +1,8 @@
+{
+  "firestore": [
+    {
+      "database": "ai-studio-android-hustlehe-da2600e0-b385-4132-9425-e29f01f1e5b3",
+      "rules": "firestore.rules"
+    }
+  ]
+}

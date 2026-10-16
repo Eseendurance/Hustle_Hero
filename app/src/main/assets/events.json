@@ -1,0 +1,850 @@
+[
+  {
+    "id": "fuel_hike",
+    "title": "Fuel Price Hike (PMS Scarcity)",
+    "category": "Energy & Cost Shock",
+    "description": "Fuel queues stretch 2 kilometers down the expressway. Black market fuel jumps to ₦1,400/litre. Your generator and transport costs will triple this week.",
+    "iconEmoji": "⛽",
+    "choices": [
+      {
+        "id": "fuel_buy_expensive",
+        "text": "Buy black market fuel to keep the shop running fully (-₦25,000)",
+        "businessCashImpact": -25000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 10,
+        "reputationImpact": 5,
+        "debtImpact": 0,
+        "outcomeMessage": "Your lights stayed on while neighboring shops were dark! Customers appreciated your reliability.",
+        "moneyLesson": "Energy resilience is a core business expense in Nigeria. Upgrading to solar eliminates recurring fuel gouging."
+      },
+      {
+        "id": "fuel_shorten_hours",
+        "text": "Close early at 4 PM to save fuel (Zero extra cost, lost walk-ins)",
+        "businessCashImpact": -8000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 5,
+        "reputationImpact": -5,
+        "debtImpact": 0,
+        "outcomeMessage": "You saved on fuel costs, but several evening regular customers found your doors locked.",
+        "moneyLesson": "Cutting operational hours preserves capital during supply shocks, but risks losing long-term customer habits."
+      },
+      {
+        "id": "fuel_pass_cost",
+        "text": "Raise product/service prices temporarily by 20%",
+        "businessCashImpact": 12000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 8,
+        "reputationImpact": -10,
+        "debtImpact": 0,
+        "outcomeMessage": "Margins stayed healthy, but customers grumbled loudly about inflation.",
+        "moneyLesson": "Passing inflation directly to consumers must be balanced with perceived value and competitor pricing."
+      }
+    ]
+  },
+  {
+    "id": "national_blackout",
+    "title": "National Grid Breakdown",
+    "category": "Infrastructure Shock",
+    "description": "Total blackout across the entire metropolis. Heat is suffocating and local businesses without generators are completely paralyzed.",
+    "iconEmoji": "🔌",
+    "choices": [
+      {
+        "id": "blackout_rent_gen",
+        "text": "Rent a neighbor's heavy generator for 3 days (-₦18,000)",
+        "businessCashImpact": -18000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 5,
+        "reputationImpact": 12,
+        "debtImpact": 0,
+        "outcomeMessage": "A flood of stranded customers entered your cool, well-lit shop!",
+        "moneyLesson": "Investing in continuity turns community-wide downtime into market share acquisition."
+      },
+      {
+        "id": "blackout_manage",
+        "text": "Manage with rechargeable lamps and hand fans",
+        "businessCashImpact": 0,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 18,
+        "reputationImpact": -8,
+        "debtImpact": 0,
+        "outcomeMessage": "Heat exhausted you and customers left quickly without browsing.",
+        "moneyLesson": "Customer comfort directly influences shopping dwell time and basket size."
+      }
+    ]
+  },
+  {
+    "id": "customer_credit",
+    "title": "Mama Nkechi Wants Credit ('Book am for me')",
+    "category": "Cashflow Trap",
+    "description": "A familiar neighborhood auntie bought goods worth ₦30,000 and promises: 'My husband will pay when salary enters at month end.'",
+    "iconEmoji": "🤝",
+    "choices": [
+      {
+        "id": "credit_accept",
+        "text": "Give her credit to preserve good neighborhood relations",
+        "businessCashImpact": 0,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": -5,
+        "stressImpact": 12,
+        "reputationImpact": 10,
+        "debtImpact": 0,
+        "outcomeMessage": "She showered you with blessings, but your working cash is now tied down.",
+        "moneyLesson": "Uncollected receivables are the #1 killer of small retail. Sales on credit do not pay your wholesalers."
+      },
+      {
+        "id": "credit_half",
+        "text": "Politely ask for 50% deposit now (-₦15,000 goods, +₦15,000 cash)",
+        "businessCashImpact": 15000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": -3,
+        "stressImpact": 4,
+        "reputationImpact": 3,
+        "debtImpact": 0,
+        "outcomeMessage": "She agreed reluctantly and paid half. Your working capital is somewhat protected.",
+        "moneyLesson": "Partial down-payments filter out bad debts and cover your wholesale cost of goods."
+      },
+      {
+        "id": "credit_decline",
+        "text": "Firmly decline: 'Strict Cash & Transfer Only, Ma'",
+        "businessCashImpact": 0,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 2,
+        "reputationImpact": -6,
+        "debtImpact": 0,
+        "outcomeMessage": "She frowned and walked away, but your inventory remained 100% intact.",
+        "moneyLesson": "Setting clear payment boundaries protects your survival. No profit is realized until cash is received."
+      }
+    ]
+  },
+  {
+    "id": "medical_emergency",
+    "title": "Sudden Malaria & Typhoid Episode",
+    "category": "Health & Emergency",
+    "description": "High fever, chills, and physical exhaustion hit you on Tuesday morning. You need hospital tests and drips immediately.",
+    "iconEmoji": "🏥",
+    "choices": [
+      {
+        "id": "med_emergency_fund",
+        "text": "Pay from Personal Savings / Emergency Fund (-₦25,000 savings)",
+        "businessCashImpact": 0,
+        "personalCashImpact": 0,
+        "savingsImpact": -25000,
+        "inventoryImpact": 0,
+        "stressImpact": -10,
+        "reputationImpact": 0,
+        "debtImpact": 0,
+        "outcomeMessage": "Your dedicated emergency fund saved the day! Your business operations were untouched.",
+        "moneyLesson": "An emergency fund acts as an emotional and financial shock absorber, isolating your business from personal crises."
+      },
+      {
+        "id": "med_business_cash",
+        "text": "Raid the shop cash drawer to pay the hospital bill (-₦30,000 biz cash)",
+        "businessCashImpact": -30000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 15,
+        "reputationImpact": 0,
+        "debtImpact": 0,
+        "outcomeMessage": "You recovered, but now your shop has less capital to restock this weekend.",
+        "moneyLesson": "Mixing business and personal money erodes trading capital. When you 'eat your seed', you compromise future harvests."
+      },
+      {
+        "id": "med_chemists",
+        "text": "Buy cheap over-the-counter paracetamol & self-medicate (-₦4,000 personal)",
+        "businessCashImpact": 0,
+        "personalCashImpact": -4000,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 30,
+        "reputationImpact": -5,
+        "debtImpact": 0,
+        "outcomeMessage": "You stayed sick all week, moving slowly and missing customer orders.",
+        "moneyLesson": "Failing to invest in health creates expensive productivity drops. Health is your primary human asset."
+      }
+    ]
+  },
+  {
+    "id": "family_urgent_2k",
+    "title": "'Urgent ₦20k' Village Support Request",
+    "category": "Black Tax & Family",
+    "description": "Your uncle calls explaining that your younger cousin's school registration deadline is this Friday. He expects you to send money.",
+    "iconEmoji": "📞",
+    "choices": [
+      {
+        "id": "family_full",
+        "text": "Send the full ₦20,000 from Personal Wallet (-₦20,000)",
+        "businessCashImpact": 0,
+        "personalCashImpact": -20000,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 8,
+        "reputationImpact": 12,
+        "debtImpact": 0,
+        "outcomeMessage": "Your family sent heartfelt prayers and praised your generosity.",
+        "moneyLesson": "Black tax is a social reality, but must be budgeted as a planned monthly line-item, not impulsive withdrawals."
+      },
+      {
+        "id": "family_token",
+        "text": "Send a token of ₦8,000 with honest explanation (-₦8,000)",
+        "businessCashImpact": 0,
+        "personalCashImpact": -8000,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 4,
+        "reputationImpact": 5,
+        "debtImpact": 0,
+        "outcomeMessage": "They appreciated the effort and managed the shortfall elsewhere.",
+        "moneyLesson": "Healthy boundaries prevent financial over-extension while maintaining family goodwill."
+      },
+      {
+        "id": "family_decline",
+        "text": "Explain that funds are tied up in business stock (₦0)",
+        "businessCashImpact": 0,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 12,
+        "reputationImpact": -8,
+        "debtImpact": 0,
+        "outcomeMessage": "Cold silence on the phone. You feel guilty, but your capital stayed intact.",
+        "moneyLesson": "You cannot pour from an empty cup. Growing the business today enables sustainable generosity tomorrow."
+      }
+    ]
+  },
+  {
+    "id": "supplier_clearance",
+    "title": "Alaba Market Bulk Clearance Discount",
+    "category": "Wholesale Opportunity",
+    "description": "Your main importer needs rapid liquidity to clear customs. He is offering a 35% flash discount on high-demand stock if paid upfront in cash.",
+    "iconEmoji": "📦",
+    "choices": [
+      {
+        "id": "supp_buy_bulk",
+        "text": "Spend ₦60,000 to buy 25 discounted units (-₦60,000 cash, +25 stock)",
+        "businessCashImpact": -60000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 25,
+        "stressImpact": 3,
+        "reputationImpact": 5,
+        "debtImpact": 0,
+        "outcomeMessage": "Incredible deal! Your unit cost dropped significantly, giving higher gross margin.",
+        "moneyLesson": "Liquidity allows you to seize bargain opportunities. Cash reserves give you pricing leverage over suppliers."
+      },
+      {
+        "id": "supp_buy_modest",
+        "text": "Buy modest batch of 10 units for ₦25,000 (-₦25,000, +10 stock)",
+        "businessCashImpact": -25000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 10,
+        "stressImpact": 0,
+        "reputationImpact": 2,
+        "debtImpact": 0,
+        "outcomeMessage": "Safe and balanced purchase without draining your bank balance.",
+        "moneyLesson": "Disciplined inventory management avoids tying up all working capital in single bets."
+      },
+      {
+        "id": "supp_skip",
+        "text": "Pass on the deal and conserve cash liquidity (₦0)",
+        "businessCashImpact": 0,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 0,
+        "reputationImpact": 0,
+        "debtImpact": 0,
+        "outcomeMessage": "You kept total cash liquidity, although competitors scooped up the discounted stock.",
+        "moneyLesson": "Passing on discounts is acceptable if your cash runway is currently tight."
+      }
+    ]
+  },
+  {
+    "id": "rent_increase_notice",
+    "title": "Landlord Gives Sudden Rent Hike Notice",
+    "category": "Fixed Overhead Squeeze",
+    "description": "Your shop landlord presents a letter announcing a 25% rent increase due to neighborhood property developments and inflation.",
+    "iconEmoji": "📜",
+    "choices": [
+      {
+        "id": "rent_negotiate",
+        "text": "Negotiate hard: offer 6 months upfront payment for a modest 10% hike",
+        "businessCashImpact": -40000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 6,
+        "reputationImpact": 4,
+        "debtImpact": 0,
+        "outcomeMessage": "The landlord accepted the upfront payment! Your long-term rent rate is locked in.",
+        "moneyLesson": "Landlords value guaranteed cashflow over empty promises. Leverage advance payments for rental discounts."
+      },
+      {
+        "id": "rent_accept",
+        "text": "Accept the 25% hike and adjust weekly personal budget",
+        "businessCashImpact": 0,
+        "personalCashImpact": -10000,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 14,
+        "reputationImpact": 0,
+        "debtImpact": 0,
+        "outcomeMessage": "Your living margin tightens, increasing weekly pressure.",
+        "moneyLesson": "Rising fixed overhead forces you to either grow top-line revenue or trim discretionary lifestyle spending."
+      }
+    ]
+  },
+  {
+    "id": "market_day_rush",
+    "title": "Market Day Bonanza & Festive Rush",
+    "category": "Sales Boom",
+    "description": "The neighborhood is bursting with holiday shoppers, wedding parties, and end-of-month paychecks! Foot traffic is quadruple normal levels.",
+    "iconEmoji": "🎉",
+    "choices": [
+      {
+        "id": "rush_extra_hours",
+        "text": "Open early at 7 AM, stay till 10 PM & run combo deals (+₦45,000 profit)",
+        "businessCashImpact": 45000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": -15,
+        "stressImpact": 16,
+        "reputationImpact": 15,
+        "debtImpact": 0,
+        "outcomeMessage": "Massive sales volume! Your cash register rang non-stop, though you are exhausted.",
+        "moneyLesson": "Capitalize aggressively during seasonal demand peaks to build cushions for dry seasons."
+      },
+      {
+        "id": "rush_normal_hours",
+        "text": "Trade at normal hours with steady standard pricing (+₦20,000 profit)",
+        "businessCashImpact": 20000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": -8,
+        "stressImpact": 2,
+        "reputationImpact": 3,
+        "debtImpact": 0,
+        "outcomeMessage": "Pleasant, steady sales with zero burnout.",
+        "moneyLesson": "Balancing profit maximization against human physical limits prevents costly burnout."
+      }
+    ]
+  },
+  {
+    "id": "inflation_spike",
+    "title": "Staple Food & Transport Inflation Spike",
+    "category": "Macroeconomic Headwind",
+    "description": "Headline inflation jumps this month. Rice, cooking gas, and public transport fares leap by 18% across town.",
+    "iconEmoji": "📈",
+    "choices": [
+      {
+        "id": "inf_bulk_food",
+        "text": "Buy a 50kg bag of rice and cooking staples in bulk now (-₦35,000 personal)",
+        "businessCashImpact": 0,
+        "personalCashImpact": -35000,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": -8,
+        "reputationImpact": 0,
+        "debtImpact": 0,
+        "outcomeMessage": "Bulk purchasing shielded your household from future price spikes for months!",
+        "moneyLesson": "Hedging inflation by converting depreciating fiat cash into durable non-perishable consumables is sound economics."
+      },
+      {
+        "id": "inf_cut_lifestyle",
+        "text": "Cut back luxury dining, cook simple meals, and use bus instead of taxis",
+        "businessCashImpact": 0,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 12,
+        "reputationImpact": 0,
+        "debtImpact": 0,
+        "outcomeMessage": "Your spending stayed flat, but frugal living requires mental discipline.",
+        "moneyLesson": "When inflation erodes purchasing power, lifestyle adjustments protect your savings rate."
+      }
+    ]
+  },
+  {
+    "id": "night_burglary_scare",
+    "title": "Midnight Burglar Scare in the Plaza",
+    "category": "Risk & Security",
+    "description": "Thieves attempted to cut open roof locks in your shopping complex. The landlord recommends contributing to joint night guard security.",
+    "iconEmoji": "🔒",
+    "choices": [
+      {
+        "id": "burglar_security_invest",
+        "text": "Install reinforced iron burglary proofing & pay guard dues (-₦28,000 biz)",
+        "businessCashImpact": -28000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": -15,
+        "reputationImpact": 8,
+        "debtImpact": 0,
+        "outcomeMessage": "Your shop is now impenetrable. You sleep soundly at night knowing your goods are safe.",
+        "moneyLesson": "Physical security and loss-prevention measures are fundamental capital protection."
+      },
+      {
+        "id": "burglar_take_chance",
+        "text": "Rely on existing padlock and pray for the best (₦0)",
+        "businessCashImpact": 0,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 22,
+        "reputationImpact": -2,
+        "debtImpact": 0,
+        "outcomeMessage": "Nothing happened this week, but persistent anxiety wakes you up at 3 AM.",
+        "moneyLesson": "Saving money by skipping basic insurance or security leaves you vulnerable to total ruin."
+      }
+    ]
+  },
+  {
+    "id": "viral_review",
+    "title": "Viral Instagram / TikTok Food & Goods Review",
+    "category": "Marketing Windfall",
+    "description": "A popular lifestyle creator posted a glowing video about your business: 'Best customer service and genuine items in the area!'",
+    "iconEmoji": "📱",
+    "choices": [
+      {
+        "id": "viral_capitalize",
+        "text": "Spend ₦20,000 on customer giveaways & branded packaging (-₦20,000, +25 Rep)",
+        "businessCashImpact": -20000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 5,
+        "reputationImpact": 25,
+        "debtImpact": 0,
+        "outcomeMessage": "Your shop went viral! New customers flooded in and became regulars.",
+        "moneyLesson": "Turn organic viral attention into sustained retention with remarkable hospitality and brand trust."
+      },
+      {
+        "id": "viral_modest",
+        "text": "Politely thank the creator and welcome walk-ins naturally (+₦15,000 sales)",
+        "businessCashImpact": 15000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": -5,
+        "stressImpact": 0,
+        "reputationImpact": 10,
+        "debtImpact": 0,
+        "outcomeMessage": "Pleasant bump in sales without incurring additional advertising expenses.",
+        "moneyLesson": "Word of mouth is the highest-ROI marketing channel in consumer business."
+      }
+    ]
+  },
+  {
+    "id": "quick_loan_offer",
+    "title": "Fast Loan App SMS Temptation",
+    "category": "Debt Trap",
+    "description": "'INSTANT APPROVAL! Get ₦150,000 into your account in 3 minutes! No collateral required!' The fine print states 15% interest every 2 weeks.",
+    "iconEmoji": "💳",
+    "choices": [
+      {
+        "id": "loan_reject",
+        "text": "Delete message immediately. Avoid predatory loan shark rates (₦0)",
+        "businessCashImpact": 0,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": -5,
+        "reputationImpact": 5,
+        "debtImpact": 0,
+        "outcomeMessage": "You wisely avoided a vicious cycle of defamatory debt recovery messages.",
+        "moneyLesson": "Predatory consumer loans with 15-30% monthly compounding interest will destroy business economics."
+      },
+      {
+        "id": "loan_accept_trap",
+        "text": "Accept ₦100,000 loan to rapidly expand stock (+₦100k cash, +₦130k debt)",
+        "businessCashImpact": 100000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 25,
+        "reputationImpact": -5,
+        "debtImpact": 130000,
+        "outcomeMessage": "Cash in hand! But now you owe ₦130,000 due in short order, with harsh penalties.",
+        "moneyLesson": "Borrow only when your return on capital is strictly higher than the borrowing cost."
+      }
+    ]
+  },
+  {
+    "id": "scam_investment",
+    "title": "WhatsApp 'Double Your Money' Forex Syndicate",
+    "category": "Fraud & Ponzi Scheme",
+    "description": "A church acquaintance pitches an exclusive 'Offshore Forex Arbitrage Fund' promising guaranteed 40% returns every 7 days. Everyone in the group is hyping it.",
+    "iconEmoji": "🚨",
+    "choices": [
+      {
+        "id": "scam_refuse",
+        "text": "Politely decline and warn others: 'If it sounds too good to be true, it is.'",
+        "businessCashImpact": 0,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": -5,
+        "reputationImpact": 10,
+        "debtImpact": 0,
+        "outcomeMessage": "Three weeks later, the admins deleted the group and disappeared with members' money! You saved your hard-earned funds.",
+        "moneyLesson": "No genuine investment can promise astronomical guaranteed weekly returns without catastrophic risk. Protect your principal."
+      },
+      {
+        "id": "scam_fall",
+        "text": "Invest ₦50,000 personal savings to test the waters (-₦50,000 personal)",
+        "businessCashImpact": 0,
+        "personalCashImpact": -50000,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 35,
+        "reputationImpact": -10,
+        "debtImpact": 0,
+        "outcomeMessage": "The platform vanished! The website shows Error 404. Your ₦50,000 is gone forever.",
+        "moneyLesson": "Greed blinds investors to due diligence. Compound wealth slowly through legitimate, productive assets."
+      }
+    ]
+  },
+  {
+    "id": "council_levy",
+    "title": "Local Government Council 'Task Force' Visit",
+    "category": "Regulatory Friction",
+    "description": "Men in official green vests arrive demanding payment for 'Trade Sanitation, Radio Permit & Business Premises Levy'. They threaten to lock the shop.",
+    "iconEmoji": "📋",
+    "choices": [
+      {
+        "id": "council_official_receipt",
+        "text": "Demand official treasury receipt and pay verified sum (-₦15,000 biz)",
+        "businessCashImpact": -15000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 5,
+        "reputationImpact": 5,
+        "debtImpact": 0,
+        "outcomeMessage": "You obtained an official council sticker. They won't harass you again this quarter.",
+        "moneyLesson": "Insisting on stamped receipts establishes official compliance and stops repeat extortion."
+      },
+      {
+        "id": "council_bribe_settle",
+        "text": "Bribe them with ₦6,000 cash quietly behind the door (-₦6,000 biz)",
+        "businessCashImpact": -6000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 8,
+        "reputationImpact": -4,
+        "debtImpact": 0,
+        "outcomeMessage": "They left for today, but noted you as an easy target for future informal shakedowns.",
+        "moneyLesson": "Shortcuts may seem cheaper today, but official paper trails defend your business long-term."
+      }
+    ]
+  },
+  {
+    "id": "customer_lost_item",
+    "title": "Customer Left Valuable Item in Shop",
+    "category": "Ethics & Integrity",
+    "description": "While sweeping your shop floor at closing, you find an expensive smartphone and ₦40,000 cash forgotten on the counter.",
+    "iconEmoji": "💎",
+    "choices": [
+      {
+        "id": "lost_item_return",
+        "text": "Safekeep it and return it to the frantic customer tomorrow morning",
+        "businessCashImpact": 0,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": -8,
+        "reputationImpact": 28,
+        "debtImpact": 0,
+        "outcomeMessage": "The overwhelmed customer cried tears of joy, rewarded you with ₦10,000, and recommended you to all colleagues!",
+        "moneyLesson": "Integrity is the supreme currency in business. A stellar reputation attracts lifelong customers and credit."
+      },
+      {
+        "id": "lost_item_pocket",
+        "text": "Quietly pocket the ₦40,000 cash for personal expenses (+₦40,000 personal)",
+        "businessCashImpact": 0,
+        "personalCashImpact": 40000,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 25,
+        "reputationImpact": -20,
+        "debtImpact": 0,
+        "outcomeMessage": "Word leaked that an item went missing at your premises. Rumors hurt your walk-in traffic.",
+        "moneyLesson": "Dishonest gain produces lingering guilt and toxic reputation destruction that outlasts the quick cash."
+      }
+    ]
+  },
+  {
+    "id": "rainy_flood_deluge",
+    "title": "Torrential Rainy Season Deluge",
+    "category": "Weather Hazard",
+    "description": "Gutters overflow as 4 hours of torrential downpour turns the market road into a flowing river. Water is lapping at your shop threshold.",
+    "iconEmoji": "⛈️",
+    "choices": [
+      {
+        "id": "flood_sandbags",
+        "text": "Hire boys immediately to stack sandbags and elevate stock (-₦12,000 biz)",
+        "businessCashImpact": -12000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 4,
+        "reputationImpact": 6,
+        "debtImpact": 0,
+        "outcomeMessage": "Your inventory was kept high and dry! Next-door shops suffered damaged goods.",
+        "moneyLesson": "Small proactive expenditures in disaster preparedness save massive capital losses."
+      },
+      {
+        "id": "flood_wait_out",
+        "text": "Wait for rain to stop and pray water doesn't cross the door",
+        "businessCashImpact": 0,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": -6,
+        "stressImpact": 18,
+        "reputationImpact": 0,
+        "debtImpact": 0,
+        "outcomeMessage": "Water seeped into the bottom shelf, spoiling several packages.",
+        "moneyLesson": "Hope is not a risk management strategy. Always elevate valuable merchandise."
+      }
+    ]
+  },
+  {
+    "id": "supplier_import_delay",
+    "title": "Port Congestion & FX Scarcity Delay",
+    "category": "Supply Chain Bottleneck",
+    "description": "Your wholesale distributor's container is stuck at Apapa port due to foreign exchange volatility. Prices will surge next week.",
+    "iconEmoji": "🚢",
+    "choices": [
+      {
+        "id": "import_lock_prices",
+        "text": "Lock in local alternative supplier contracts now (-₦15,000 biz advance)",
+        "businessCashImpact": -15000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 12,
+        "stressImpact": 6,
+        "reputationImpact": 8,
+        "debtImpact": 0,
+        "outcomeMessage": "You secured supply before local shortages drove wholesale prices higher.",
+        "moneyLesson": "Diversifying suppliers mitigates single-point-of-failure vulnerabilities in your supply chain."
+      },
+      {
+        "id": "import_sit_tight",
+        "text": "Sell existing stock slowly without restocking until port clears",
+        "businessCashImpact": 0,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 8,
+        "reputationImpact": -4,
+        "debtImpact": 0,
+        "outcomeMessage": "You conserved cash, but ran out of key customer items by Thursday.",
+        "moneyLesson": "Stockouts represent missed revenue and drive loyal clients to competing shops."
+      }
+    ]
+  },
+  {
+    "id": "owambe_bulk_order",
+    "title": "Big Owambe Saturday Bulk Order",
+    "category": "Commercial Opportunity",
+    "description": "A wealthy party host needs emergency bulk supplies for a 400-guest Saturday event. They offer a 30% premium for instant delivery.",
+    "iconEmoji": "🎉",
+    "choices": [
+      {
+        "id": "owambe_fulfill",
+        "text": "Mobilize stock and fulfill the full order (+₦65,000 cash, -18 stock)",
+        "businessCashImpact": 65000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": -18,
+        "stressImpact": 12,
+        "reputationImpact": 20,
+        "debtImpact": 0,
+        "outcomeMessage": "Huge payday! The party organizers were ecstatic with your prompt delivery.",
+        "moneyLesson": "Special event catering and corporate orders provide high-margin cash injections."
+      },
+      {
+        "id": "owambe_half",
+        "text": "Fulfill half the order to retain stock for walk-in regulars (+₦32,000 cash, -8 stock)",
+        "businessCashImpact": 32000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": -8,
+        "stressImpact": 4,
+        "reputationImpact": 10,
+        "debtImpact": 0,
+        "outcomeMessage": "Balanced profit while keeping regular neighborhood shoppers happy.",
+        "moneyLesson": "Never completely starve core daily clients to chase a one-off windfall."
+      }
+    ]
+  },
+  {
+    "id": "staff_advance",
+    "title": "Shop Assistant Pleads for Salary Advance",
+    "category": "Human Capital",
+    "description": "Your reliable sales assistant begs for 2 weeks salary advance because their mother fell ill in Ondo state.",
+    "iconEmoji": "🧑‍🤝‍🧑",
+    "choices": [
+      {
+        "id": "staff_grant_advance",
+        "text": "Grant the advance with structured weekly deductions (-₦15,000 biz cash)",
+        "businessCashImpact": -15000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": -4,
+        "reputationImpact": 12,
+        "debtImpact": 0,
+        "outcomeMessage": "Your assistant showed immense loyalty, working double-time with genuine enthusiasm.",
+        "moneyLesson": "Empathy in staff management builds irreplaceable loyalty and reduces costly employee turnover."
+      },
+      {
+        "id": "staff_gift_token",
+        "text": "Give a non-repayable gift of ₦5,000 from personal cash (-₦5,000 personal)",
+        "businessCashImpact": 0,
+        "personalCashImpact": -5000,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 0,
+        "reputationImpact": 8,
+        "debtImpact": 0,
+        "outcomeMessage": "They were deeply grateful for your support and business cash remained steady.",
+        "moneyLesson": "Compassionate gifts protect the business payroll schedule while offering genuine assistance."
+      },
+      {
+        "id": "staff_decline",
+        "text": "Strict policy: 'No salary advances permitted' (₦0)",
+        "businessCashImpact": 0,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 14,
+        "reputationImpact": -8,
+        "debtImpact": 0,
+        "outcomeMessage": "Staff felt demotivated, resulting in sluggish service and mistakes at the till.",
+        "moneyLesson": "A demoralized workforce directly harms sales and inventory supervision."
+      }
+    ]
+  },
+  {
+    "id": "competitor_opens",
+    "title": "New Competitor Opens Across the Road",
+    "category": "Market Competition",
+    "description": "A well-funded competitor opened a glossy shop directly opposite you, slashing prices to undercut your customer base.",
+    "iconEmoji": "🏪",
+    "choices": [
+      {
+        "id": "compete_service",
+        "text": "Double down on customer loyalty, smiles & free bonus packaging (-₦8,000 biz)",
+        "businessCashImpact": -8000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 4,
+        "reputationImpact": 18,
+        "debtImpact": 0,
+        "outcomeMessage": "Your regular customers refused to switch! Trust defeated cheap gimmicks.",
+        "moneyLesson": "Compete on service and customer relationships, not suicidal price wars that eliminate profits."
+      },
+      {
+        "id": "compete_price_war",
+        "text": "Slash prices below cost to drive them out (-₦25,000 margin hit)",
+        "businessCashImpact": -25000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 24,
+        "reputationImpact": 0,
+        "debtImpact": 0,
+        "outcomeMessage": "You sold out fast, but lost money on every carton. Your cash reserves shrank.",
+        "moneyLesson": "Price wars hurt small businesses worse than well-capitalized competitors. Protect your margins."
+      }
+    ]
+  },
+  {
+    "id": "neighbor_shop_fire",
+    "title": "Neighboring Shop Fire Emergency Appeal",
+    "category": "Community Solidarity",
+    "description": "An electrical spark burnt down a fellow trader's stall down the lane. The market association organizes an emergency relief contribution.",
+    "iconEmoji": "🔥",
+    "choices": [
+      {
+        "id": "fire_donate_generous",
+        "text": "Contribute ₦15,000 from Personal Wallet (-₦15,000 personal)",
+        "businessCashImpact": 0,
+        "personalCashImpact": -15000,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": -6,
+        "reputationImpact": 20,
+        "debtImpact": 0,
+        "outcomeMessage": "Market elders commended your community leadership and unity.",
+        "moneyLesson": "Social capital and community solidarity form an informal safety net in informal markets."
+      },
+      {
+        "id": "fire_donate_modest",
+        "text": "Contribute ₦5,000 modest token (-₦5,000 personal)",
+        "businessCashImpact": 0,
+        "personalCashImpact": -5000,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 0,
+        "reputationImpact": 8,
+        "debtImpact": 0,
+        "outcomeMessage": "You participated honorably within your financial means.",
+        "moneyLesson": "Give within your means so your philanthropy does not jeopardize your own financial stability."
+      }
+    ]
+  },
+  {
+    "id": "bank_app_glitch",
+    "title": "Banking App Network Glitch",
+    "category": "Fintech & Settlement Risk",
+    "description": "Weekend interbank settlement failed. Three major customers made transfers of ₦45,000 that haven't hit your business account yet.",
+    "iconEmoji": "📶",
+    "choices": [
+      {
+        "id": "bank_hold_goods",
+        "text": "Kindly ask customers to wait or pay cash until credit alert reflects",
+        "businessCashImpact": 0,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": 0,
+        "stressImpact": 8,
+        "reputationImpact": -5,
+        "debtImpact": 0,
+        "outcomeMessage": "Two paid cash; one cancelled. But you avoided fake transfer fraud!",
+        "moneyLesson": "Never release high-value inventory on unconfirmed payment screenshots. Value real settlement."
+      },
+      {
+        "id": "bank_release_trust",
+        "text": "Release goods based on their transfer debit alerts",
+        "businessCashImpact": 30000,
+        "personalCashImpact": 0,
+        "savingsImpact": 0,
+        "inventoryImpact": -8,
+        "stressImpact": 15,
+        "reputationImpact": 10,
+        "debtImpact": 0,
+        "outcomeMessage": "Two transactions cleared on Monday, but one reversed. You lost ₦15,000.",
+        "moneyLesson": "Debit alert on customer's phone does not equal credit alert in your bank."
+      }
+    ]
+  }
+]

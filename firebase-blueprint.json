@@ -1,0 +1,116 @@
+{
+  "entities": {
+    "LeaderboardEntry": {
+      "title": "LeaderboardEntry",
+      "description": "Public net worth leaderboard ranking for Hustle Hero entrepreneurs.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Auth UID of the player"
+        },
+        "userName": {
+          "type": "string",
+          "description": "Player character name"
+        },
+        "userAvatar": {
+          "type": "string",
+          "description": "Player character emoji avatar"
+        },
+        "businessName": {
+          "type": "string",
+          "description": "Venture name"
+        },
+        "cityName": {
+          "type": "string",
+          "description": "Market city"
+        },
+        "netWorth": {
+          "type": "number",
+          "description": "Total player net worth in Naira"
+        },
+        "week": {
+          "type": "number",
+          "description": "Current week reached"
+        },
+        "reputation": {
+          "type": "number",
+          "description": "Reputation score (0-100)"
+        },
+        "friendCode": {
+          "type": "string",
+          "description": "Unique 6-8 char friend referral code"
+        },
+        "titleTier": {
+          "type": "string",
+          "description": "Wealth tier title"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of last rank update"
+        }
+      },
+      "required": ["userId", "userName", "netWorth", "week"]
+    },
+    "UserAchievement": {
+      "title": "UserAchievement",
+      "description": "Public community feed event of milestones unlocked by players.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Auth UID of the creator"
+        },
+        "userName": {
+          "type": "string",
+          "description": "Player character name"
+        },
+        "userAvatar": {
+          "type": "string",
+          "description": "Player avatar emoji"
+        },
+        "achievementTitle": {
+          "type": "string",
+          "description": "Title of milestone"
+        },
+        "description": {
+          "type": "string",
+          "description": "Story of milestone achievement"
+        },
+        "businessName": {
+          "type": "string",
+          "description": "Business venture name"
+        },
+        "netWorth": {
+          "type": "number",
+          "description": "Net worth at achievement"
+        },
+        "weekNumber": {
+          "type": "number",
+          "description": "Week number achieved"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Achievement timestamp"
+        }
+      },
+      "required": ["userId", "userName", "achievementTitle"]
+    }
+  },
+  "firestore": {
+    "/leaderboard/{userId}": {
+      "schema": {
+        "$ref": "#/entities/LeaderboardEntry"
+      },
+      "description": "Top player rankings sorted by net worth"
+    },
+    "/achievements/{achievementId}": {
+      "schema": {
+        "$ref": "#/entities/UserAchievement"
+      },
+      "description": "Public stream of milestone achievements by community entrepreneurs"
+    }
+  }
+}

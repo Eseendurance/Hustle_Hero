@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Golden Coin Outer Glow & Base -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M54,23 A31,31 0 1,0 54,85 A31,31 0 1,0 54,23 Z" />
+
+    <!-- Coin Inner Face -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M54,26 A28,28 0 1,0 54,82 A28,28 0 1,0 54,26 Z" />
+
+    <!-- Coin Embossed Inner Rim -->
+    <path
+        android:strokeColor="#FDE68A"
+        android:strokeWidth="1.5"
+        android:pathData="M54,29 A25,25 0 1,0 54,79 A25,25 0 1,0 54,29 Z" />
+
+    <!-- Star Emblem on Top of Coin -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M54,31 L55.5,34.5 L59,34.8 L56.3,37.1 L57.1,40.5 L54,38.7 L50.9,40.5 L51.7,37.1 L49,34.8 L52.5,34.5 Z" />
+
+    <!-- Pure White Embossed Naira '₦' Symbol -->
+    <!-- Left Vertical Stem -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M41,43 h5 v22 h-5 z" />
+
+    <!-- Right Vertical Stem -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M62,43 h5 v22 h-6 z" />
+
+    <!-- Diagonal Stroke -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M43,43 L65,65 h-4 L41,45 z" />
+
+    <!-- Upper Crossbar -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M37,50 h34 v3.5 h-34 z" />
+
+    <!-- Lower Crossbar -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M37,56 h34 v3.5 h-34 z" />
+
+    <!-- Bottom Ribbon / Hustle Banner Arc -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M38,72 Q54,78 70,72 L68,75 Q54,80 40,75 Z" />
+</vector>

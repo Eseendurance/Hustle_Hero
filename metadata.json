@@ -1,0 +1,6 @@
+{
+  "name": "Hustle Hero",
+  "description": "A Nigerian business & personal finance simulation game. Run your hustle, balance budgets, save in Ajo, and conquer the streets!",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
